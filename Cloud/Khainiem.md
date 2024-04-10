@@ -54,3 +54,14 @@ Và đôi khi chuẩn bị trước các biện pháp bảo mật phù hợp th�
 
 
 * Di chuyển cloud:
+- Đề cập khi sử dụng IaaS để triển khai các dịch vụ bằng cách sử dụng các máy ảo chạy trên cơ sở hạ tầng -> hữu ích.
+Ví dụ: sử dụng loại máy tính nào trong số nhiều loại máy tính khả dụng và loại dữ trữ nào để gắn vào chúng
+- IaaS cho admintrator sử dụng chiến lược nâng và chuyển dịch. Nó có ý nghĩa là gì?
+<code> Giả sử bạn làm việc tại một tổ chức nhỏ đang mở rộng. Khi công ty phát triển, không gian vật lý cho nhân viên trở nên khan hiếm -> chuyển đến không gian lớn hơn -> di chuyển tất cả mọi thứ đang chạy tại cơ sở sang đến cơ sở có không gian lớn hơn. Có nghĩa là nếu di chuyển các máy chủ vật lý, ta cần phải lấy máy chủ từ văn phòng cũ, tắt nó đi trong cửa sổ bảo trì -> đưa đến vtri mới -> nâng máy chủ lên và di chuyển đến một vị trí mới -> nâng trong "nâng và chuyển dịch" </code>
+- Khi di chuyển lên Cloud:
+   <Code> + Trong trường hợp này, bạn đang chuyển từ cách chạy máy chủ theo cách này sang cách khác. Điều quan trọng cần lưu ý với cả hai cách tiếp cận là cấu hình cốt lõi của máy chủ vẫn giữ nguyên. Đó là cùng một phần mềm cần được cài đặt trên máy để cung cấp chức năng của nó, bất kể máy chủ được lưu trữ vật lý tại chỗ hay ảo trên Cloud.</code>
+   <code> + Nếu bạn đã sử dụng quản lý cấu hình để triển khai và cấu hình các máy chủ vật lý của mình, thì việc chuyển sang thiết lập Cloud có thể khá dễ dàng. Bạn chỉ cần áp dụng cùng cấu hình đó cho các máy ảo đang chạy trên Cloud và bạn sẽ sao chép được thiết lập.</code>
+   <code> + phải tự mình cài đặt và cấu hình các ứng dụng. Bạn cần đảm bảo rằng cả hệ điều hành và phần mềm đều được cập nhật, không có chức năng nào bị hỏng khi chúng được cập nhật và một loạt các thứ khác tùy thuộc vào ứng dụng cụ thể mà máy chủ đang chạy.</code>
+
+- Sử dụng Platform as a Service (PaaS) - Nền tảng dịch vụ. 
+
