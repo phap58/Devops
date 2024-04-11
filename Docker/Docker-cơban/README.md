@@ -2,4 +2,5 @@
 <h2>Lý thuyết</h2>
 <ul>
 <li><u>Các ghi chép cần chú ý về docker
+<li>Các câu lệnh dùng trong docker
 </ul>

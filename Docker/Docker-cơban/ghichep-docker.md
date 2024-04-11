@@ -68,3 +68,29 @@
 
 <li>Bằng việc sử dụng docker build người dùng có thể tạo một tự động xây dựng thực hiện một số lệnh dòng lệnh liên tiếp.
 </ul>
+<hr>
+<h4>1.4 Các thành phần, kiến trúc trong docker</h4>
+<ul>
+<img src="../img/docker-engine-components-flow.png">
+<li>Hình ảnh bên trên là mô tả về Docker Engine. Theo đó, Docker Engine là một ứng dụng client-server với các thành phần chính:
+<ul>
+<li>Một máy chủ đảm nhiệm thực hiện quá trình daemon (chạy câu lệnh docker).
+<li>REST API xác định các giao diện mà các chương trình có thể sử dụng để nói chuyện với daemon và hướng dẫn nó phải làm gì.
+<li>Một CLI (chạy câu lệnh docker).
+</ul>
+<li>CLI sẽ sử dụng Docker REST API để kiểm soát hoặc tương tác với Docker daemon thông qua kịch bản hoặc lệnh CLI trực tiếp.
+<img src="../img/thanhphanchinh.png">
+<li>Docker sử dụng kiến trúc client-server. Docker client sẽ giao tiếp với Docker daemon các công việc building, running và distributing các Docker Container.
+
+<li>Docker client và Docker daemon có thể chạy cùng trên một hệ thống hoặc ta có thể kết nối một Docker client tới một remote Docker daemon. Docker client và Docker daemon liên lạc với nhau bằng việc sử dụng REST API thông qua UNIX sockets hoặc network interfaces.
+
+<li>Docker daemon (dockerd ) sẽ lắng nghe các request từ Docker API và quản lý Docker objects bao gồm images, containers, networks và volumes. Một daemon cũng có thể liên lạc với các daemons khác để quản lý Docker services.
+
+<li>Docker client (docker ) là con đường chính để những người sử dụng Docker tương tác và giao tiếp với Docker. Khi sử dụng mộ câu lệnh chẳng hạn như docker run thì client sẽ gửi câu lệnh tới dockerd để thực hiện câu lệnh. Các câu lệnh từ Docker client sử dụng Docker API và có thể giao tiếp với nhiều Docker daemon.
+</ul>
+<hr>
+<h4>1.5 Các trạng thái, sự chuyển giao trạng thái của container</h4>
+<p>Hình ảnh dưới đây mô tả cho một vòng đời của container trong Docker cùng với các trạng thái hoạt động:
+
+</p>
+<img src="../img/docker-state.png">
