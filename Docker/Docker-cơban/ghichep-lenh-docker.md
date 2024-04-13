@@ -163,4 +163,108 @@ Khai báo <code>compassionate_darwin:/tmp/foo/myfile.txt</code> và <Code>compas
 
 
 </ul>
+<li> Câu lệnh <Code>docker volume</code>
+<ul>
+<li> Chức năng: Cung cấp các lệnh con để quản lý dữ liệu đối với containers
+<li>Các câu lệnh con bao gồm
+
+<table>
+<tr>
+<th>Command</th>
+<th>Mô tả</th>
+</tr>
+<tr>
+<th>docker volume create</th>	
+<th>Tạo một volume</th>
+</tr>
+<tr>
+<th>docker volume inspect</th>	
+<th>Hiển thị thông tin về một hay nhiều volumes
+</th>
+</tr>
+<tr>
+<th>docker volume ls</th>	
+<th>Liệt kê volumes</th>
+</tr>
+<tr>
+<th>docker volume prune	</th>	
+<th>Loại bỏ volumes không sử dụng</th>
+</tr>
+<tr>
+<th>docker volume rm</th>	
+<th>Loại bỏ một hay nhiều volumes</th>
+</tr>
+</table>
+<li>Ví dụ: Để tạo volume, ta sử dụng câu lệnh <code>docker volume create</code> với cú pháp
+
+
+                docker volume create [OPTIONS] [VOLUME]
+trong đó các option bao gồm
+<br>
+<table>
+<tr>
+<th>
+Options
+</th>
+<th>
+Mặc định
+</th>
+<th>
+Mô tả
+</th>
+</tr>
+<tr>
+<th>
+--driver, -d
+</th>
+<th>
+local
+</th>
+<Th>
+Khai báo tên volume driver
+</th>
+</tr>
+<tr>
+<Th>
+--label
+</th>
+<th>
+
+</th>
+<th>
+Set metadata for a volume
+</th>
+</tr>
+<tr>
+<th>
+--name
+</th>
+<Th>
+</th>
+<th>
+Khai báo tên volume
+</th>
+</tr>
+<tr>
+<th>
+--opt, -o
+</th>
+<th>
+</th>
+<th>
+Set driver specific options
+</th>
+</tr>
+</table>
+<br>
+chẳng hạn <Code>docker volume create heelo </code>
+<li>Một ví dụ khác là tạo một volume tpe nfs mout đường dẫn <code>/path/to/dir</code> với chế độ <code>rw</code> từ host <code>192.168.1.1</code>. Ta sử dụng thêm tùy chọn <Code>--opt</code> như sau:
+
+                  docker volume create --driver local \
+                 --opt type=nfs \
+                 --opt o=addr=192.168.1.1,rw \
+                 --opt device=:/path/to/dir \
+                 hello
+
+</ul>
 </ul>
