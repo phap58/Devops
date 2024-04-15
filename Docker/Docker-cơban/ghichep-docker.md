@@ -23,7 +23,21 @@
 <li>Hỗ trợ APIs để giao tiếp với container
 <li>Phù hợp trong môi trường làm việc đòi hòi phải liên tục tích hợp và triển khai các dịch vụ, phát triển cục bộ, các ứng dụng multi-tier.
 </ul>
+<h6>Làm rõ hơn về vấn đề tại sao sử dụng Docker</h6>
+<ul>
+Có rất nhiều lợi ích khi sử dụng Docker, bao gồm:
+
+<li>Tính nhất quán(Consistency): Docker đảm bảo rằng ứng dụng của bạn sẽ chạy giống nhau trên mọi máy tính, bất kể hệ điều hành hoặc phần mềm khác được cài đặt.
+<li>Tính di động(Portability): Docker container có thể dễ dàng chia sẻ và triển khai tới bất kỳ máy tính nào đã cài đặt Docker.
+<li>Cách ly(Isolation): Các bộ chứa Docker chạy cách ly với nhau, nghĩa là chúng không thể can thiệp lẫn nhau hoặc với hệ điều hành máy chủ.
+<li>Bảo mật(Security): Các bộ chứa Docker có thể được sử dụng để cải thiện tính bảo mật cho các ứng dụng của bạn bằng cách cách ly chúng khỏi hệ điều hành máy chủ và với nhau.
 </ul>
+</ul>
+**What is the difference between a container and a virtual machine?
+<hr>
+Vùng chứa là một gói nhẹ, độc lập, có thể thực thi được, bao gồm mọi thứ mà ứng dụng của bạn cần để chạy. Máy ảo là một hệ điều hành hoàn chỉnh chạy trên hệ điều hành máy chủ. Các thùng chứa nhẹ hơn và di động hơn so với máy ảo và chúng không yêu cầu nhiều chi phí.
+<hr>
+**
 <h4>1.3 Khái niệm khi sử dụng docker</h4>
 <h5>1.3.1 Image </h5>
 <ul>
